@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Github Battle</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- Place this in the <head> of your page at the bottom of the <head> like shown here.-->
+<script type="text/javascript">
+// Set the page start time
+window["adrum-start-time"] = new Date().getTime();
+// SaaS EUM only:
+// Change the app key to the specific app key for your app. Your app key can be found on the Web EUM configuration page in your Controller.
+// https://docs.appdynamics.com/display/latest/Set+Up+and+Configure+Web+EUEM
+window["adrum-app-key"] = "PUT-YOUR-APP-KEY-HERE";
+</script>
+<!-- Load the adrum file from the AppDynamics CDN.
+     Change this to your adrum.js if you're using an on premises EUM Server -->
+<script src="http://cdn.appdynamics.com/adrum/adrum-latest.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+</html>
