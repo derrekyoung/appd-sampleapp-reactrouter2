@@ -11,6 +11,12 @@ var ConfirmBattleContainer = require("../containers/ConfirmBattleContainer");
 var ResultsContainer = require("../containers/ResultsContainer");
 
 function sendVPage(vPageName) {
+  // Check if ADRUM is defined
+  if (typeof ADRUM === "undefined") {
+    console.log("ADRUM is undefined");
+    return;
+  }
+
   // Parse the URL
   var _location = [
     location.protocol,
@@ -24,12 +30,6 @@ function sendVPage(vPageName) {
     _location = _location + "#" + vPageName;
   }
   //console.log("sendVPage(): " + vPageName+", URL: "+_location);
-
-  // Check if ADRUM is defined
-  if (typeof ADRUM === "undefined") {
-    console.log("ADRUM is undefined");
-    return;
-  }
 
   // Build the ADRUM vPageView object
   var vPageView = new ADRUM.events.VPageView({
